@@ -1,0 +1,7 @@
+id - integer
+title - varchar
+content - text
+created_at - DateTime
+updated_at - DateTime
+photo - Image
+is_published - Boolean
