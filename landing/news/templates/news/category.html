@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>{{ title }}</title>
+    <title>{{ category.title }}</title>
   </head>
   <body>
 
@@ -24,9 +24,7 @@
       </nav>
 
 <div class='container mt-3'>
-  <h1>{{ title }}</h1>
-    {% comment %} {{ '1234567890'|filesizeformat }} {% endcomment %}
-    {% comment %} ^ размер файла содержащийся в строке {% endcomment %}
+  <h1>{{ category.title }}</h1>
     <div class='row'>
       <div class='col-md-4'>
         <div class="list-group">
@@ -54,8 +52,6 @@
                           <div class='media-body'>
                             <h5 class="card-title">{{ i.title }}</h5>
                             <p class="card-text">{{ i.content|linebreaks|truncatewords:50 }}</p>
-                              {% comment %} {% lorem 3 p random %} {% endcomment %}
-                              {% comment %} ^ Лорем можно использовать и через джанго {% endcomment %}
                             <a href="#" class="btn btn-primary">Read more...</a>
                           </div>
                         </div>
