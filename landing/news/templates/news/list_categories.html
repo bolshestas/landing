@@ -1,8 +1,6 @@
 <div class="list-group">
-    {% comment %} {{ arg1 }} {{ arg2 }} {% endcomment %}
-    {% comment %} ^ можно вывести из news_tags {% endcomment %}
     {% for i in categories %}
-    <a href="{% url 'category' i.pk %}" class="list-group-item list-group-item-action">
+    <a href="{{ i.get_absolute_url }}" class="list-group-item list-group-item-action">
       {{ i.title }}
     </a>
     {% endfor %}
